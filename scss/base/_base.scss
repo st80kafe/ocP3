@@ -4,4 +4,9 @@ html {
 }
 .ohmyfood {
     margin: 0 0;
+    a:any-link {
+        text-decoration: none;
+        color: #fff;
+      }
 }
+

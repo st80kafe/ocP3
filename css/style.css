@@ -6,6 +6,10 @@ html {
 .ohmyfood {
   margin: 0 0;
 }
+.ohmyfood a:any-link {
+  text-decoration: none;
+  color: #fff;
+}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -21,10 +25,67 @@ h1 {
 }
 
 h2 {
-  font-size: 16pt;
+  font-weight: 700;
+  font-size: 18pt;
 }
 
 h3 {
+  font-size: 12pt;
+}
+
+button.explore {
+  background-color: #FF79DA;
+  border: #FF79DA;
+  height: 55px;
+  border-radius: 55px;
+  color: #fff;
+}
+button.explore h3 {
+  margin: 15px -15px;
+  font-weight: 600;
+}
+
+.card-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 15%;
+}
+
+.card {
+  height: 235px;
+  width: 90%;
+  font-size: 11px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 #00000033;
+  transition: 0.3s;
+  background-color: #cff;
+  margin-bottom: 15px;
+}
+
+.card img {
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  width: 100%;
+  max-height: 70%;
+}
+
+.card div {
+  border-radius: 0 0 15px 15px;
+  width: 100%;
+  height: 30%;
+  margin-top: -19px;
+  font-size: 11px;
+  background-color: #fff;
+  color: #000;
+}
+.card div h3 {
+  padding: 15px 0 0 5%;
+  margin-bottom: 3px;
+}
+.card div .location {
+  padding: 0 0 0 5%;
   font-size: 12pt;
 }
 
@@ -32,12 +93,27 @@ nav {
   background-color: #f2f2f2;
   text-align: center;
 }
+nav .city {
+  height: 25px;
+  font-size: 15px;
+  padding: 15px 0 5px;
+  background-color: #e2dede;
+}
+nav .city i {
+  margin-right: 5px;
+}
+nav div.city {
+  border-top: 2px solid #beb5b5;
+}
 nav h2 {
   padding: 25px;
 }
 nav h3 {
-  padding: 5px 25px 25px;
-  font-weight: 300;
+  padding: 5px 35px 15px;
+  font-weight: 400;
+}
+nav button {
+  margin-bottom: 35px;
 }
 
 .app-nav nav {
@@ -45,9 +121,53 @@ nav h3 {
   text-align: left;
 }
 .app-nav nav h2 {
-  padding: 25px 0 15px 15px;
+  padding: 5% 0 2px 5%;
+}
+.app-nav nav div {
+  padding: 10px 0 15px;
 }
 
+.howto {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.howto span.circ-pri {
+  font-size: 10pt;
+  background-color: #9356DC;
+  color: #fff;
+  padding: 1px 6px;
+  border-radius: 15px;
+  margin: 0 0 0 5%;
+  align-self: center;
+}
+.howto span.box-works {
+  width: 90%;
+  font-weight: 500;
+  font-size: 11pt;
+  padding: 25px 25px;
+  background-color: #f2f2f2;
+  box-shadow: 0 4px 8px 0 #00000033;
+  border-radius: 15px;
+  margin: 0 5% 0 -2%;
+}
+.howto span.box-works a {
+  color: #000;
+}
+.howto span.box-works i {
+  margin-right: 25px;
+  color: #acacac;
+}
+.howto .box-works:hover {
+  background-color: #eed5eb;
+}
+.howto .box-works:hover i {
+  color: #9356DC;
+}
+
+header {
+  border-width: 3px;
+  border-bottom: #000;
+}
 header h1 {
   text-align: center;
 }
@@ -57,7 +177,7 @@ header h1 {
   text-align: left;
 }
 .restaurants h2 {
-  padding: 25px 0 15px 15px;
+  padding: 15% 0 5px 5%;
 }
 
 footer {
@@ -66,12 +186,17 @@ footer {
   color: #fff;
   padding: 15px;
 }
-footer a:any-link {
-  text-decoration: none;
-  color: #fff;
-}
 footer h3 {
   font-weight: 300;
+}
+footer i {
+  margin-right: 15px;
+}
+footer div {
+  margin-bottom: 15px;
+}
+footer div .logo {
+  margin-bottom: 25px;
 }
 
 .logo {

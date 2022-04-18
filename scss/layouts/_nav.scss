@@ -1,18 +1,72 @@
 nav {
     background-color: #f2f2f2;
     text-align: center;
+    .city {
+        height: 25px;
+        font-size: 15px;
+        padding: 15px 0 5px ;
+        background-color: #e2dede;
+        i {
+            margin-right: 5px;
+        }
+    }
+    div.city {
+        border-top: 2px solid #beb5b5;
+    }
     h2 {
         padding: 25px;
     }
     h3 {
-        padding: 5px 25px 25px;
-        font-weight: 300;
+        padding: 5px 35px 15px;
+        font-weight: 400;
+    }
+    button {
+        margin-bottom: 35px;
     }
 }
 .app-nav nav{
     background-color: #fff;
     text-align: left;
     h2 {
-        padding: 25px 0 15px 15px;
+        padding: 5% 0 2px 5%;
+    }
+    div{
+        padding: 10px 0 15px;
+    }
+}
+.howto  {
+    display: flex;
+    flex-direction: row-reverse;
+    span.circ-pri {
+        font-size: 10pt;
+        background-color: $color-primary;
+        color: #fff;
+        padding: 1px 6px;
+        border-radius: 15px;
+        margin: 0 0 0 5%;
+        align-self: center;
+    }
+    span.box-works {
+        width: 90%;
+        font-weight: 500;
+        font-size: 11pt;
+        padding: 25px 25px;
+        background-color: $restaurant-background;
+        box-shadow: 0 4px 8px 0 #00000033;
+        border-radius: 15px;
+        margin: 0 5% 0 -2%;
+        a {
+            color: #000;
+        }
+        i {
+            margin-right: 25px;
+            color: #acacac;
+        }
+    }
+    .box-works:hover {
+        background-color: $howto-background;
+        i {
+            color: $color-primary;
+        }
     }
 }
