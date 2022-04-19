@@ -39,6 +39,16 @@
     .location{
         padding: 0 0 0 5%;
         font-size: 12pt;
+        i {
+            font-size: 15pt;
+            margin: 0 0 0 210px;
+        }
     } 
+  }
+  div.new {
+      font-size: 11pt;
+      background-color: $color-tertiary;
+      padding: 5px 25px;
+      margin: -240px  0 215px 225px ;
   }
   
