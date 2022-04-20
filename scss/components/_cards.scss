@@ -42,7 +42,7 @@
      
     } 
    }
-   
+
   div.new {
       font-size: 11pt;
       background-color: $color-tertiary;
@@ -51,6 +51,12 @@
   }
   div.heart {
     font-size: 15pt;
+    i {
+        color: #000;
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
     margin: -65px  0 45px 225px ;
 }
   

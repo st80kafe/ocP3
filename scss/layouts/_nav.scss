@@ -8,8 +8,8 @@ nav {
         background-color: #e2dede;
         i {
             margin-right: 5px;
-        }
-    }
+        }  
+    } 
     div.city {
         border-top: 2px solid #beb5b5;
     }
@@ -23,6 +23,9 @@ nav {
     button {
         margin-bottom: 35px;
     }
+    .send {
+        margin: 10px 0;
+    } 
 }
 .app-nav nav{
     background-color: #fff;
@@ -68,5 +71,24 @@ nav {
         i {
             color: $color-primary;
         }
+    }
+}
+
+main.menu nav.menu-section {
+    margin: 40px 0 0 5%;
+    div.course {
+        font-size: 15px;
+        text-align: start;
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+    div.underline {
+        color: $color-tertiary;
+        font-size: 15px;
+        margin: -10px 0 0 0;
+        text-align: start;
+        font-weight: 900;
     }
 }

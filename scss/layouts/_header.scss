@@ -1,5 +1,76 @@
 header {
+    div.top {
+        background-color: #fff;
+        padding: 8px 0;
+    }
     h1 {
         text-align: center;
     }
+    div.arrow{
+        i {
+            color: #555;
+            font-size: large;
+            // ::before {
+            //     content: url(index.html);
+            // }
+        }
+        margin: -50px 0 30px 35px;
+    }
 }
+
+header.header-image {
+    width: 105%;
+    margin: 0 0 0 -10px;
+    div.restaurant-image {
+        img {
+            height: 275px;
+            object-fit: fill;
+            width: 100%;
+            margin: 0 0;
+            padding: 0 0;
+        }
+    } 
+    div.restaurant-name {
+        background-color: $restaurant-background;
+        height: 100px;
+        position: relative;
+        bottom: 70px;
+        border-radius: 55px 55px 0 0;
+        width: 100%;
+        margin: 0 0;
+
+        div.rating {
+            line-break: strict;
+            font-family: 'Shrikhand', cursive;
+            font-weight: 900;
+            font-size: 21pt;
+            position: relative;
+            top: 25px;
+            span {
+                padding: 0 5% 0 8%;
+                float: left;
+                &:nth-child(2){ 
+                    padding: 0 12% 0 0;
+                    float: right;
+                    margin : 0 0 0 -15px ;
+                    // enchanted-plate.html
+                }
+            }
+            span.plate {
+                padding: 0 3% 0 6%;    
+                &:nth-child(2){ 
+                    padding: 0 6% 0 0;
+                    float: right;
+                    margin : 0 0 0 -15px ;
+                    // enchanted-plate.html
+                }
+
+            }
+            i {
+                margin: 0 0 0 15%;
+            }
+        }
+        
+    }
+}
+    

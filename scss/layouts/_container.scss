@@ -1,8 +1,8 @@
 .restaurants {
     background-color: $restaurant-background;
     text-align: left;
+    margin-bottom: -15px; // cover menu "order" button margin over footer
     h2 {
-        // padding: 25px 0 15px 25px;
         padding: 15% 0 5px 5%;
     }
 }

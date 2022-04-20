@@ -1,12 +1,24 @@
-button.explore {
-    background-color: $color-secondary;
+button{
+    background: linear-gradient($color-secondary, $color-primary);
     border: $color-secondary;
     height: 55px;
     border-radius: 55px;
     color: #fff;
-    h3 {
-        margin: 15px -15px;
-        font-weight: 600;
+    padding: 0 35px;
+    margin: 10px 0 35px 0;
+    .explore {
+        span {
+            margin: 15px;
+            font-weight: 600;
+            font-size: 14pt;
+        }
+    }
+    .order {
+        span {
+            margin: 15px;
+            font-weight: 600;
+            font-size: 14pt;
+        }
     }
     
 }
