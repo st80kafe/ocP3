@@ -1,0 +1,24 @@
+.spinner {
+    background: transparent;
+    height: 100%;
+    position: relative;
+    visibility: hidden;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 200px;
+        width: 55px;
+        height: 55px;
+        left: calc(50% - 30px);
+        border-radius: 55px;
+        border-top: 6px solid rgba(50, 50, 25, 1.0);
+        border-left: 6px solid rgba(50, 50, 25, 1.0);
+        border-bottom: 6px solid rgba(50, 50, 25, 1.0);
+        border-right: 6px solid rgba(25, 25, 25, 0.0);
+        animation: spinner .6s ease-out .6s 10 none;
+    }
+}
+@keyframes spinner {
+    from {visibility: visible;}
+    to {transform: rotate(360deg);}
+  }
