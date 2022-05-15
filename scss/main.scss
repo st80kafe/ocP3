@@ -1,6 +1,6 @@
 @import "./utils/imports";
 @import "./utils/variables";
-@import "./utils/functions";
+
 @import "./utils/mixins";
 
 @import "./base/base";
@@ -8,9 +8,11 @@
 
 @import  "./components/buttons";
 @import  "./components/cards";
+@import  "./components/spinner";
+
+@import "./pages/menu";
 
 
-@import "./layouts/form";
 @import "./layouts/nav";
 @import "./layouts/header";
 @import "./layouts/container";

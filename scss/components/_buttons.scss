@@ -1,11 +1,18 @@
 button{
-    background: linear-gradient($color-secondary, $color-primary);
+    background: $button-background;
+    box-shadow: 0 6px 14px 0 #00000033;
+    transition: 0.3s;
     border: $color-secondary;
     height: 55px;
     border-radius: 55px;
     color: #fff;
     padding: 0 35px;
     margin: 10px 0 35px 0;
+    &:hover {
+        color: #fef;
+        box-shadow: 0 8px 16px 0 #00000068;
+        background: $button-hover;
+    }
     .explore {
         span {
             margin: 15px;

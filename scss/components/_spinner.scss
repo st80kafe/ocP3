@@ -4,21 +4,28 @@
     position: relative;
     visibility: hidden;
     &::after {
-        content: "";
+        content: "ohmyfood";
         position: absolute;
-        top: 200px;
+        top: 300px;
         width: 55px;
         height: 55px;
-        left: calc(50% - 30px);
-        border-radius: 55px;
-        border-top: 6px solid rgba(50, 50, 25, 1.0);
-        border-left: 6px solid rgba(50, 50, 25, 1.0);
-        border-bottom: 6px solid rgba(50, 50, 25, 1.0);
-        border-right: 6px solid rgba(25, 25, 25, 0.0);
-        animation: spinner .6s ease-out .6s 10 none;
+        left: calc(50% - 60px);
+        border-radius: 95px;
+        border-top: 36px solid $spin-color;
+        border-left: 36px solid $color-primary;
+        border-bottom: 36px solid $spin-color;
+        border-right: 36px solid $color-primary;
+        border-top-style: double;
+        border-bottom-style: dotted;
+        animation: spinner .6s ease-out .6s 5 none;
     }
 }
 @keyframes spinner {
     from {visibility: visible;}
     to {transform: rotate(360deg);}
   }
+
+//   border-top: 6px solid rgba(50, 50, 25, 1.0);
+//   border-left: 6px solid rgba(50, 50, 25, 1.0);
+//   border-bottom: 6px solid rgba(50, 50, 25, 1.0);
+//   border-right: 6px solid rgba(25, 25, 25, 0.0);

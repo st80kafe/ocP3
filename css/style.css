@@ -6,6 +6,16 @@ html {
 .ohmyfood {
   margin: 0 0;
 }
+@media (min-width: 1250px) {
+  .ohmyfood {
+    margin: 0 5% 0 2%;
+  }
+}
+@media (min-width: 1050px) {
+  .ohmyfood {
+    margin: 0 1% 0 1%;
+  }
+}
 .ohmyfood a:any-link {
   text-decoration: none;
   color: #fff;
@@ -15,53 +25,14 @@ html {
   background-color: #f2f2f2;
   margin: 0 0;
 }
+@media (min-width: 950px) {
+  .ohmyfood-menu {
+    margin: 0 1% 0 1%;
+  }
+}
 .ohmyfood-menu a:any-link {
   text-decoration: none;
   color: #fff;
-}
-
-main.menu {
-  background-color: #f2f2f2;
-  padding-top: 5px;
-  margin-top: -70px;
-}
-main.menu div.menu-item {
-  border-radius: 15px 15px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px 0 #00000033;
-  transition: 0.3s;
-  max-height: 200px;
-  width: 90%;
-  margin: 15px 5% 25px 5%;
-}
-main.menu div.menu-item div.item-name {
-  font-size: 16px;
-  font-weight: 900;
-  padding: 20px 0 0 10px;
-}
-main.menu div.menu-item div.item-name.break {
-  margin-top: -15px;
-}
-main.menu div.menu-item div.item-desc {
-  padding: 0 0 20px 10px;
-  margin-top: -10px;
-  font-size: 14px;
-  font-weight: 400;
-}
-main.menu div.menu-item div.item-price {
-  font-size: 16px;
-  font-weight: 900;
-  position: relative;
-  top: 8px;
-  left: 85%;
-}
-main.menu div.menu-item div.menu-tick {
-  height: fit-content;
-  width: 20%;
-  background-color: #99E2D0;
-  position: absolute;
-  left: 100%;
-  visibility: hidden;
 }
 
 body {
@@ -88,12 +59,19 @@ h3 {
 
 button {
   background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0 6px 14px 0 #00000033;
+  transition: 0.3s;
   border: #FF79DA;
   height: 55px;
   border-radius: 55px;
   color: #fff;
   padding: 0 35px;
   margin: 10px 0 35px 0;
+}
+button:hover {
+  color: #fef;
+  box-shadow: 0 8px 16px 0 #00000068;
+  background: linear-gradient(#ff83dd, #985ede);
 }
 button .explore span {
   margin: 15px;
@@ -123,6 +101,11 @@ button .order span {
   transition: 0.3s;
   background-color: #cff;
   margin-bottom: 15px;
+}
+@media (min-width: 1250px) {
+  .card {
+    height: 335px;
+  }
 }
 
 .card img {
@@ -165,7 +148,285 @@ div.heart i {
   color: #000;
 }
 div.heart i:hover {
-  background-color: #9356DC;
+  visibility: hidden;
+}
+
+div.sol {
+  font-size: 15pt;
+  margin: -69px 0 45px 225px;
+}
+div.sol i {
+  color: #9356DC;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+div.sol i:hover {
+  opacity: 1;
+}
+
+.spinner {
+  background: transparent;
+  height: 100%;
+  position: relative;
+  visibility: hidden;
+}
+.spinner::after {
+  content: "ohmyfood";
+  position: absolute;
+  top: 300px;
+  width: 55px;
+  height: 55px;
+  left: calc(50% - 60px);
+  border-radius: 95px;
+  border-top: 36px solid #3c166a;
+  border-left: 36px solid #9356DC;
+  border-bottom: 36px solid #3c166a;
+  border-right: 36px solid #9356DC;
+  border-top-style: double;
+  border-bottom-style: dotted;
+  animation: spinner 0.6s ease-out 0.6s 5 none;
+}
+
+@keyframes spinner {
+  from {
+    visibility: visible;
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+main.menu {
+  background-color: #f2f2f2;
+  padding-top: 5px;
+  margin-top: -70px;
+}
+main.menu div.menu-item {
+  display: inline-block;
+  border-radius: 15px 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 #00000033;
+  max-height: 100px;
+  width: 90%;
+  margin: 15px 5% 25px 5%;
+  z-index: 1;
+  opacity: 0;
+  animation: itemload 800ms ease-in forwards;
+}
+main.menu div.menu-item:nth-child(2) {
+  animation-delay: 200ms;
+}
+main.menu div.menu-item:nth-child(3) {
+  animation-delay: 300ms;
+}
+main.menu div.menu-item:nth-child(4) {
+  animation-delay: 400ms;
+}
+main.menu div.menu-item:nth-child(5) {
+  animation-delay: 500ms;
+}
+main.menu div.menu-item:nth-child(6) {
+  animation-delay: 600ms;
+}
+main.menu div.menu-item:nth-child(7) {
+  animation-delay: 700ms;
+}
+main.menu div.menu-item:nth-child(8) {
+  animation-delay: 800ms;
+}
+main.menu div.menu-item:nth-child(9) {
+  animation-delay: 900ms;
+}
+main.menu div.menu-item:nth-child(10) {
+  animation-delay: 1000ms;
+}
+main.menu div.menu-item:nth-child(11) {
+  animation-delay: 1100ms;
+}
+main.menu div.menu-item:nth-child(12) {
+  animation-delay: 1200ms;
+}
+main.menu div.menu-item:nth-child(13) {
+  animation-delay: 1300ms;
+}
+main.menu div.menu-item:hover > div.item-price {
+  transition: all 1s;
+  left: 55%;
+}
+main.menu div.menu-item:hover > div.menu-tick {
+  overflow: hidden;
+  width: 25%;
+  left: 75%;
+  transition: all 850ms ease-in-out;
+}
+main.menu div.menu-item:hover > div.menu-tick > i {
+  transform: rotate(360deg);
+  margin-left: 0px;
+  color: #fff;
+  background-color: #99E2D0;
+  z-index: auto;
+}
+main.menu div.menu-item:hover div.item-desc {
+  transition: all 2s ease-in;
+}
+main.menu div.menu-item:hover div.item-desc > span#ox::after {
+  content: "...";
+}
+main.menu div.menu-item:hover div.item-desc > span#egg::after {
+  content: "...";
+}
+main.menu div.menu-item:hover div.item-desc > span#steak::after {
+  content: "...";
+}
+main.menu div.menu-item:hover div.item-desc > span#soup::after {
+  content: "...";
+}
+main.menu div.menu-item div.item-name {
+  font-size: 16px;
+  font-weight: 900;
+  padding: 30px 0 0 10px;
+}
+main.menu div.menu-item div.item-name.line {
+  padding: 16px 0 2px 10px;
+}
+main.menu div.menu-item div.item-name.nextline {
+  margin: -19px 0 -2px;
+  padding: 14px 0 0 10px;
+}
+main.menu div.menu-item div.item-desc {
+  padding: 0 0 20px 10px;
+  margin-top: -10px;
+  font-size: 14px;
+  font-weight: 400;
+  max-width: 80%;
+}
+main.menu div.menu-item div.item-desc > span#ox {
+  width: fit-content;
+  visibility: visible;
+}
+main.menu div.menu-item div.item-desc > span#ox::after {
+  content: "ed parsnips";
+  width: 0%;
+  visibility: visible;
+  margin-left: 0px;
+}
+main.menu div.menu-item div.item-desc > span#egg {
+  width: fit-content;
+  visibility: visible;
+}
+main.menu div.menu-item div.item-desc > span#egg::after {
+  content: " and orange";
+  width: 0%;
+  visibility: visible;
+  margin-left: 0px;
+}
+main.menu div.menu-item div.item-desc > span#steak {
+  width: fit-content;
+  visibility: visible;
+}
+main.menu div.menu-item div.item-desc > span#steak::after {
+  content: " seasoned veg...";
+  width: 0%;
+  visibility: visible;
+  margin-left: 0px;
+}
+main.menu div.menu-item div.item-desc > span#soup {
+  width: fit-content;
+  visibility: visible;
+}
+main.menu div.menu-item div.item-desc > span#soup::after {
+  content: "em artichoke";
+  width: 0%;
+  visibility: visible;
+  margin-left: 0px;
+}
+@media (max-width: 359px) {
+  main.menu div.menu-item div.item-desc > span#ox {
+    width: fit-content;
+    visibility: visible;
+  }
+  main.menu div.menu-item div.item-desc > span#ox::after {
+    content: "...";
+    width: 0%;
+    visibility: visible;
+    margin-left: 0px;
+  }
+  main.menu div.menu-item div.item-desc > span#egg {
+    width: fit-content;
+    visibility: visible;
+  }
+  main.menu div.menu-item div.item-desc > span#egg::after {
+    content: "...";
+    width: 0%;
+    visibility: visible;
+    margin-left: 0px;
+  }
+  main.menu div.menu-item div.item-desc > span#steak {
+    width: fit-content;
+    visibility: visible;
+  }
+  main.menu div.menu-item div.item-desc > span#steak::after {
+    content: "...";
+    width: 0%;
+    visibility: visible;
+    margin-left: 0px;
+  }
+  main.menu div.menu-item div.item-desc > span#soup {
+    width: fit-content;
+    visibility: visible;
+  }
+  main.menu div.menu-item div.item-desc > span#soup::after {
+    content: "...";
+    width: 0%;
+    visibility: visible;
+    margin-left: 0px;
+  }
+}
+main.menu div.menu-item div.item-price {
+  font-size: 16px;
+  font-weight: 900;
+  position: relative;
+  top: 8px;
+  left: 75%;
+  margin: 0 0 0 10%;
+}
+main.menu div.menu-item div.menu-tick {
+  height: 100px;
+  border-radius: 0 15px 15px 0;
+  width: 0%;
+  background-color: #99E2D0;
+  position: relative;
+  bottom: 95px;
+  left: 100%;
+  opacity: 1;
+  transition: all 2s;
+}
+main.menu div.menu-item div.menu-tick i {
+  color: #f2f2f2;
+  background-color: #f2f2f2;
+  opacity: 1;
+  position: relative;
+  font-size: 21pt;
+  top: 40%;
+  left: 30%;
+  z-index: -1;
+  margin-left: 0px;
+  transition: transform 1s linear;
+}
+@keyframes itemload {
+  0% {
+    opacity: 0.1;
+    transform: translateY(35px);
+  }
+  50% {
+    opacity: 0.35;
+    transform: translateY(25px);
+    overflow: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    overflow: hidden;
+  }
 }
 
 nav {
@@ -239,8 +500,13 @@ nav .send {
   margin-right: 25px;
   color: #acacac;
 }
+@media (min-width: 950px) {
+  .howto span.box-works i {
+    margin-left: 25px;
+  }
+}
 .howto .box-works:hover {
-  background-color: #eed5eb;
+  background-color: #f3e2f1;
 }
 .howto .box-works:hover i {
   color: #9356DC;
@@ -277,12 +543,11 @@ header div.arrow {
 }
 header div.arrow i {
   color: #555;
-  font-size: large;
+  font-size: 21pt;
 }
 
 header.header-image {
-  width: 105%;
-  margin: 0 0 0 -10px;
+  width: 100%;
 }
 header.header-image div.restaurant-image img {
   height: 275px;
@@ -291,7 +556,18 @@ header.header-image div.restaurant-image img {
   margin: 0 0;
   padding: 0 0;
 }
+@media (min-width: 650px) {
+  header.header-image div.restaurant-image img {
+    height: 475px;
+  }
+}
+@media (min-width: 950px) {
+  header.header-image div.restaurant-image img {
+    height: 575px;
+  }
+}
 header.header-image div.restaurant-name {
+  display: inline-block;
   background-color: #f2f2f2;
   height: 100px;
   position: relative;
@@ -301,7 +577,6 @@ header.header-image div.restaurant-name {
   margin: 0 0;
 }
 header.header-image div.restaurant-name div.rating {
-  line-break: strict;
   font-family: "Shrikhand", cursive;
   font-weight: 900;
   font-size: 21pt;
@@ -309,21 +584,53 @@ header.header-image div.restaurant-name div.rating {
   top: 25px;
 }
 header.header-image div.restaurant-name div.rating span {
-  padding: 0 5% 0 8%;
   float: left;
 }
+header.header-image div.restaurant-name div.rating span:nth-child(1) {
+  padding-left: 10%;
+}
 header.header-image div.restaurant-name div.rating span:nth-child(2) {
-  padding: 0 12% 0 0;
-  float: right;
-  margin: 0 0 0 -15px;
+  position: absolute;
+  right: 10%;
+}
+header.header-image div.restaurant-name div.rating span:nth-child(2):hover i:nth-child(1) {
+  opacity: 1;
+}
+header.header-image div.restaurant-name div.rating span:nth-child(2):hover i:nth-child(2) {
+  opacity: 0;
+}
+header.header-image div.restaurant-name div.rating span:nth-child(2) i {
+  transition: opacity 0.3s ease-in;
+}
+header.header-image div.restaurant-name div.rating span:nth-child(2) i:nth-child(1) {
+  opacity: 0;
+  color: #9356DC;
+}
+header.header-image div.restaurant-name div.rating span:nth-child(2) i:nth-child(2) {
+  position: relative;
+  bottom: 41px;
+}
+@media (max-width: 375px) {
+  header.header-image div.restaurant-name div.rating span:nth-child(1) {
+    padding-left: 3%;
+  }
+  header.header-image div.restaurant-name div.rating span:nth-child(2) {
+    right: 1%;
+  }
 }
 header.header-image div.restaurant-name div.rating span.plate {
-  padding: 0 3% 0 6%;
+  padding: 0 2% 0 6%;
+}
+header.header-image div.restaurant-name div.rating span.plate:nth-child(1) > span.plate {
+  margin-left: -5%;
 }
 header.header-image div.restaurant-name div.rating span.plate:nth-child(2) {
-  padding: 0 6% 0 0;
-  float: right;
-  margin: 0 0 0 -15px;
+  right: 8%;
+}
+@media (max-width: 450px) {
+  header.header-image div.restaurant-name div.rating span.plate:nth-child(2) {
+    right: 0%;
+  }
 }
 header.header-image div.restaurant-name div.rating i {
   margin: 0 0 0 15%;
@@ -336,6 +643,11 @@ header.header-image div.restaurant-name div.rating i {
 }
 .restaurants h2 {
   padding: 15% 0 5px 5%;
+}
+@media (min-width: 1250px) {
+  .restaurants {
+    border-radius: 10px;
+  }
 }
 
 footer {

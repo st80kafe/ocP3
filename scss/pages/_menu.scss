@@ -5,7 +5,7 @@ main.menu {
 
     
     div.menu-item {
-        // display:inline-block;
+        display:inline-block;
         border-radius: 15px 15px ;
         background-color: #fff;
         box-shadow: 0 4px 8px 0 #00000033;
@@ -13,67 +13,41 @@ main.menu {
         width: 90%;
         margin: 15px 5% 25px 5%;
         z-index: 1;
-        opacity: 1;
-        // transition: all 1s ease-in ;
-        // transition: all 1s ease-in cubic-bezier(0.445, 0.05, 0.55, 0.95) 800ms;
-        //
-        animation: dash 2100ms ease-in 300ms;
+        opacity: 0;
+        
+        @for $i from 2 to 14 {
+            &:nth-child(#{$i}) {
+                animation-delay: 100ms * $i;
+            }
+        }
+        
+        animation: itemload 800ms ease-in forwards;
+
         &:hover > div.item-price{
-            // animation: price 6000ms ease-in-out 25ms;  
             transition: all 1s;
             left: 55%;
         }
        
         &:hover > div.menu-tick{
-            & > i {
-                // animation: spin 6000ms ease-out 300ms ;
-            
+            & > i {            
                 transform: rotate(360deg);
                 margin-left: 0px;
                 color: #fff;
                 background-color: $color-tertiary;
                 z-index: auto;
             }
-            // animation: tick 6000ms ease-in-out 25ms ;
+            
             overflow: hidden;
             width: 25%;
             left: 75%;
             transition: all 850ms ease-in-out ;
         }
         &:hover  div.item-desc {   
-            // animation: desc 6000ms ease-in-out 25ms;
-            // content: $content-pts;
             @include trn-after($select-desc);
             transition: all 2s ease-in;
         }
     
-        
-        // @keyframes tick {
-        //     to {
-        //         width: 25%;
-        //         left: 75%;
-        //     }
-        // }
-        // @keyframes spin {
-        //     to { 
-        //         opacity: 1;
-        //         transform: rotate(360deg);
-        //         // margin-left: 0%;
-        //     }
-        // }
-            
-        
-        // @keyframes price {
-        //     to {
-        //         left: 55%;
-        //     }
-        // }
-        // @keyframes desc {
-        //     to {
-        //         content: $content-pts;
-        //     }
-        // }
-    
+       
         div.item-name{
             font-size: 16px;
             font-weight: 900;
@@ -93,6 +67,17 @@ main.menu {
             font-weight: 400;
             max-width: 80%;
             @include desc-after($select-desc);
+            @media  (max-width: 359px) {
+                $select-desc: (
+                    ox:     "...",
+                    egg:    "...",
+                    steak:  "...",
+                    soup:   "..."
+                );
+                @include desc-after($select-desc);
+                // fixes ( to min-width 257px) width wrap of item descriptions
+                // altering position of reverse transition
+            }
         }
         
         div.item-price {
@@ -124,15 +109,27 @@ main.menu {
                 left: 30%;
                 z-index: -1;
                 margin-left: 0px;
-                
                 transition: transform 1s linear;
             }
         }
     }
-    @keyframes dash {
-        from {
-            opacity: 0;
-            margin-bottom: 5%;
+    
+    @keyframes itemload {  
+        0% {
+            opacity: .1;
+            transform: translateY(35px);
+        }
+     
+        50% {
+            opacity: .35;
+            transform: translateY(25px);
+            overflow: hidden;
+        }
+       
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+            overflow: hidden;
         }
     }
 }

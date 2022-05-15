@@ -64,6 +64,9 @@ nav {
         i {
             margin-right: 25px;
             color: #acacac;
+            @media  (min-width: 950px) {
+                margin-left: 25px;
+            }
         }
     }
     .box-works:hover {
@@ -92,3 +95,5 @@ main.menu nav.menu-section {
         font-weight: 900;
     }
 }
+
+

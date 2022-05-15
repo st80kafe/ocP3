@@ -9,28 +9,32 @@ header {
     div.arrow{
         i {
             color: #555;
-            font-size: large;
-            // ::before {
-            //     content: url(index.html);
-            // }
+            font-size: 21pt;
         }
         margin: -50px 0 30px 35px;
     }
 }
 
 header.header-image {
-    width: 105%;
-    margin: 0 0 0 -10px;
+    width: 100%;
+
     div.restaurant-image {
         img {
             height: 275px;
-            object-fit: fill;
+            object-fit:fill;
             width: 100%;
             margin: 0 0;
             padding: 0 0;
+            @media  (min-width: 650px) {
+                height: 475px;
+            }
+            @media  (min-width: 950px) {
+                height: 575px;
+            }
         }
     } 
     div.restaurant-name {
+        display: inline-block;
         background-color: $restaurant-background;
         height: 100px;
         position: relative;
@@ -40,37 +44,67 @@ header.header-image {
         margin: 0 0;
 
         div.rating {
-            line-break: strict;
             font-family: 'Shrikhand', cursive;
             font-weight: 900;
             font-size: 21pt;
             position: relative;
             top: 25px;
             span {
-                padding: 0 5% 0 8%;
-                float: left;
-                &:nth-child(2){ 
-                    padding: 0 12% 0 0;
-                    float: right;
-                    margin : 0 0 0 -15px ;
-                    // enchanted-plate.html
+                float: left;               
+                &:nth-child(1){ 
+                    padding-left: 10%;
                 }
+                &:nth-child(2){ 
+                    position: absolute;
+                    right: 10%;
+                    &:hover i:nth-child(1){
+                        opacity: 1;
+                    }
+                    &:hover i:nth-child(2){
+                        opacity: 0;
+                    }
+                    & i{
+                        transition:  opacity 0.3s ease-in;
+                        &:nth-child(1){
+                            opacity: 0;
+                            color: $color-primary;
+                        }
+                        &:nth-child(2){
+                            position: relative;
+                            bottom: 41px;
+                        }
+                    }
+                }
+                @media  (max-width: 375px) {
+                    &:nth-child(1){ 
+                        padding-left: 3%;
+                    }
+                    &:nth-child(2){ 
+                        right: 1%;
+                    }
+                } // min-width 299px
             }
             span.plate {
-                padding: 0 3% 0 6%;    
-                &:nth-child(2){ 
-                    padding: 0 6% 0 0;
-                    float: right;
-                    margin : 0 0 0 -15px ;
-                    // enchanted-plate.html
+
+                padding: 0 2% 0 6%;    
+                &:nth-child(1) > span.plate{ 
+                    margin-left: -5% ;
                 }
 
+
+                &:nth-child(2){ 
+                    right: 8%;
+                    @media  (max-width: 450px) {
+                        right: 0%;
+                    }
+                }
+                // enchanted-plate.html
             }
             i {
+                // drop inline fa-regular icon
                 margin: 0 0 0 15%;
             }
-        }
-        
+        }    
     }
 }
     

@@ -8,6 +8,9 @@
 
 .card {
     height: 235px;
+    @media  (min-width: 1250px) {
+        height: 335px
+    }
     width: 90%;
     font-size: 11px;
     border-radius: 15px;
@@ -54,9 +57,22 @@
     i {
         color: #000;
         &:hover {
-            background-color: $color-primary;
+            visibility: hidden;
         }
     }
     margin: -65px  0 45px 225px ;
 }
-  
+
+div.sol {
+    font-size: 15pt;
+    i {
+        color: $color-primary;
+        opacity: 0;
+        transition:  opacity 0.3s ease-in-out;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    margin: -69px  0 45px 225px ;
+}
+

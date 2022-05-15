@@ -6,3 +6,4 @@ dist
 .cache
 tmp.*
 test_menu.html
+.vscode/*
