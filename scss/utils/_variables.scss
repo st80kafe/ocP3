@@ -9,21 +9,22 @@ $restaurant-background: #f2f2f2;
 $button-background: linear-gradient($color-secondary, $color-primary);
 $button-hover: linear-gradient($btnpress-sec, $btnpress-pri);
 $howto-background: #f3e2f1 ;
-$content-pts: "...";
+
+// variable and maps parameters for experiment using mixins 
+// $content-pts: "...";
 
 
-// maps
-$select-desc: (
-    ox:     "ed parsnips",
-    egg:    " and orange",
-    steak:  " seasoned veg...",
-    soup:   "em artichoke"
-);
-@media  (max-width: 349px) {
-    $select-desc: (
-        ox:     "ed parsnips",
-        egg:    " and orange",
-        steak:  " seasoned veg...",
-        soup:   "em ar..."
-    );
-}
+// $select-desc: (
+//     ox:     "ed parsnips",
+//     egg:    " and orange",
+//     steak:  " seasoned veg...",
+//     soup:   "em artichoke"
+// );
+// @media  (max-width: 349px) {
+//     $select-desc: (
+//         ox:     "ed parsnips",
+//         egg:    " and orange",
+//         steak:  " seasoned veg...",
+//         soup:   "em ar..."
+//     );
+// }

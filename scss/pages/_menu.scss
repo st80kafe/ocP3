@@ -5,7 +5,6 @@ main.menu {
 
     
     div.menu-item {
-        display:inline-block;
         border-radius: 15px 15px ;
         background-color: #fff;
         box-shadow: 0 4px 8px 0 #00000033;
@@ -14,7 +13,7 @@ main.menu {
         margin: 15px 5% 25px 5%;
         z-index: 1;
         opacity: 0;
-        
+       
         @for $i from 2 to 14 {
             &:nth-child(#{$i}) {
                 animation-delay: 100ms * $i;
@@ -38,13 +37,15 @@ main.menu {
             }
             
             overflow: hidden;
-            width: 25%;
-            left: 75%;
-            transition: all 850ms ease-in-out ;
+            width: calc(25%);
+            left: calc(75%);
         }
+        
         &:hover  div.item-desc {   
-            @include trn-after($select-desc);
-            transition: all 2s ease-in;
+            width: calc(80%);
+            @media  (max-width: 540px) {
+                width: calc(50%);
+            }
         }
     
        
@@ -66,18 +67,9 @@ main.menu {
             font-size: 14px;
             font-weight: 400;
             max-width: 80%;
-            @include desc-after($select-desc);
-            @media  (max-width: 359px) {
-                $select-desc: (
-                    ox:     "...",
-                    egg:    "...",
-                    steak:  "...",
-                    soup:   "..."
-                );
-                @include desc-after($select-desc);
-                // fixes ( to min-width 257px) width wrap of item descriptions
-                // altering position of reverse transition
-            }
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         
         div.item-price {
@@ -91,7 +83,7 @@ main.menu {
         div.menu-tick {
             height: 100px;
             border-radius:  0 15px  15px 0;
-            width: 0%;
+            width: 0px;
             background-color: $color-tertiary;
             position: relative;
             bottom: 95px;

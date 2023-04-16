@@ -1,24 +1,27 @@
-@mixin desc-after($desc-map){
-    @each $id, $desc in $desc-map {
-        & > span##{$id} {
-            width: fit-content;
-            visibility: visible;
-            &::after{
-                content: $desc;
-                width: 0%;
-                visibility: visible;
-                margin-left: 0px; 
-            }
-        }
-    }
-}
+// using mixins to respond when lines of menu-item overflow 
 
-@mixin trn-after($desc-map){
-    @each $id, $desc in $desc-map {
-        & > span##{$id} {   
-            &::after{
-                content: $content-pts;
-            }
-        }
-    }
-}
+// @mixin desc-after($desc-map){
+//     @each $id, $desc in $desc-map {
+//         & > span##{$id} {
+//             width: fit-content;
+//             visibility: visible;
+//             &::after{
+//                 content: $desc;
+//                 width: 0%;
+//                 visibility: visible;
+//                 margin-left: 0px; 
+//             }
+//         }
+//     }
+// }
+
+// @mixin trn-after($desc-map){
+//     @each $id, $desc in $desc-map {
+//         & > span##{$id} {   
+//             &::after{
+//                 content: $content-pts;
+//             }
+//         }
+//     }
+// }
+// 

@@ -9,7 +9,8 @@
 .card {
     height: 235px;
     @media  (min-width: 1250px) {
-        height: 335px
+        height: 335px;
+        margin-bottom: 55px;
     }
     width: 90%;
     font-size: 11px;
@@ -51,20 +52,31 @@
       background-color: $color-tertiary;
       padding: 5px 25px;
       margin: -240px  0 215px 225px ;
+      @media (max-width: 345px){
+        margin-right: 55px;
+      }
   }
   div.heart {
     font-size: 15pt;
+    font-size: 15pt;
+    margin: -69px  0 45px 225px ;
     i {
         color: #000;
         &:hover {
             visibility: hidden;
         }
     }
-    margin: -65px  0 45px 225px ;
+    
+    @media (min-width: 1250px){
+        font-size: 25pt;
+        margin: -135px  0 45px 225px ;
+    }
+    
 }
 
 div.sol {
     font-size: 15pt;
+    margin: -69px  0 45px 225px ;
     i {
         color: $color-primary;
         opacity: 0;
@@ -73,6 +85,10 @@ div.sol {
             opacity: 1;
         }
     }
-    margin: -69px  0 45px 225px ;
+    
+    @media (min-width: 1250px){
+        font-size: 25pt;
+        margin: -86px  0 45px 225px ;
+    }
 }
 

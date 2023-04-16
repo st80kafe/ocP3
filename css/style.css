@@ -105,6 +105,7 @@ button .order span {
 @media (min-width: 1250px) {
   .card {
     height: 335px;
+    margin-bottom: 55px;
   }
 }
 
@@ -139,16 +140,28 @@ div.new {
   padding: 5px 25px;
   margin: -240px 0 215px 225px;
 }
+@media (max-width: 345px) {
+  div.new {
+    margin-right: 55px;
+  }
+}
 
 div.heart {
   font-size: 15pt;
-  margin: -65px 0 45px 225px;
+  font-size: 15pt;
+  margin: -69px 0 45px 225px;
 }
 div.heart i {
   color: #000;
 }
 div.heart i:hover {
   visibility: hidden;
+}
+@media (min-width: 1250px) {
+  div.heart {
+    font-size: 25pt;
+    margin: -135px 0 45px 225px;
+  }
 }
 
 div.sol {
@@ -162,6 +175,12 @@ div.sol i {
 }
 div.sol i:hover {
   opacity: 1;
+}
+@media (min-width: 1250px) {
+  div.sol {
+    font-size: 25pt;
+    margin: -86px 0 45px 225px;
+  }
 }
 
 .spinner {
@@ -201,7 +220,6 @@ main.menu {
   margin-top: -70px;
 }
 main.menu div.menu-item {
-  display: inline-block;
   border-radius: 15px 15px;
   background-color: #fff;
   box-shadow: 0 4px 8px 0 #00000033;
@@ -256,7 +274,6 @@ main.menu div.menu-item:hover > div.menu-tick {
   overflow: hidden;
   width: 25%;
   left: 75%;
-  transition: all 850ms ease-in-out;
 }
 main.menu div.menu-item:hover > div.menu-tick > i {
   transform: rotate(360deg);
@@ -266,19 +283,12 @@ main.menu div.menu-item:hover > div.menu-tick > i {
   z-index: auto;
 }
 main.menu div.menu-item:hover div.item-desc {
-  transition: all 2s ease-in;
+  width: 80%;
 }
-main.menu div.menu-item:hover div.item-desc > span#ox::after {
-  content: "...";
-}
-main.menu div.menu-item:hover div.item-desc > span#egg::after {
-  content: "...";
-}
-main.menu div.menu-item:hover div.item-desc > span#steak::after {
-  content: "...";
-}
-main.menu div.menu-item:hover div.item-desc > span#soup::after {
-  content: "...";
+@media (max-width: 540px) {
+  main.menu div.menu-item:hover div.item-desc {
+    width: 50%;
+  }
 }
 main.menu div.menu-item div.item-name {
   font-size: 16px;
@@ -298,88 +308,9 @@ main.menu div.menu-item div.item-desc {
   font-size: 14px;
   font-weight: 400;
   max-width: 80%;
-}
-main.menu div.menu-item div.item-desc > span#ox {
-  width: fit-content;
-  visibility: visible;
-}
-main.menu div.menu-item div.item-desc > span#ox::after {
-  content: "ed parsnips";
-  width: 0%;
-  visibility: visible;
-  margin-left: 0px;
-}
-main.menu div.menu-item div.item-desc > span#egg {
-  width: fit-content;
-  visibility: visible;
-}
-main.menu div.menu-item div.item-desc > span#egg::after {
-  content: " and orange";
-  width: 0%;
-  visibility: visible;
-  margin-left: 0px;
-}
-main.menu div.menu-item div.item-desc > span#steak {
-  width: fit-content;
-  visibility: visible;
-}
-main.menu div.menu-item div.item-desc > span#steak::after {
-  content: " seasoned veg...";
-  width: 0%;
-  visibility: visible;
-  margin-left: 0px;
-}
-main.menu div.menu-item div.item-desc > span#soup {
-  width: fit-content;
-  visibility: visible;
-}
-main.menu div.menu-item div.item-desc > span#soup::after {
-  content: "em artichoke";
-  width: 0%;
-  visibility: visible;
-  margin-left: 0px;
-}
-@media (max-width: 359px) {
-  main.menu div.menu-item div.item-desc > span#ox {
-    width: fit-content;
-    visibility: visible;
-  }
-  main.menu div.menu-item div.item-desc > span#ox::after {
-    content: "...";
-    width: 0%;
-    visibility: visible;
-    margin-left: 0px;
-  }
-  main.menu div.menu-item div.item-desc > span#egg {
-    width: fit-content;
-    visibility: visible;
-  }
-  main.menu div.menu-item div.item-desc > span#egg::after {
-    content: "...";
-    width: 0%;
-    visibility: visible;
-    margin-left: 0px;
-  }
-  main.menu div.menu-item div.item-desc > span#steak {
-    width: fit-content;
-    visibility: visible;
-  }
-  main.menu div.menu-item div.item-desc > span#steak::after {
-    content: "...";
-    width: 0%;
-    visibility: visible;
-    margin-left: 0px;
-  }
-  main.menu div.menu-item div.item-desc > span#soup {
-    width: fit-content;
-    visibility: visible;
-  }
-  main.menu div.menu-item div.item-desc > span#soup::after {
-    content: "...";
-    width: 0%;
-    visibility: visible;
-    margin-left: 0px;
-  }
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 main.menu div.menu-item div.item-price {
   font-size: 16px;
@@ -392,7 +323,7 @@ main.menu div.menu-item div.item-price {
 main.menu div.menu-item div.menu-tick {
   height: 100px;
   border-radius: 0 15px 15px 0;
-  width: 0%;
+  width: 0px;
   background-color: #99E2D0;
   position: relative;
   bottom: 95px;
